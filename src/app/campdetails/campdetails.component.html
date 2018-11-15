@@ -1,0 +1,25 @@
+<h3>Camp Details </h3>
+<div class="extraSpace"></div>
+<app-future-camps></app-future-camps>
+<app-past-camp></app-past-camp>
+<div class='row'>
+  <div class="col-md-5" style='background-color: lightgray'>
+    <div>Past Camps</div>
+    <ul>
+
+      <li *ngFor='let eachItem of pastCamps'>
+        {{eachItem}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-5" style='background-color: lightgoldenrodyellow'>
+    <div>Future Camps</div>
+    <ul>
+
+      <li *ngFor='let eachItem of futCamps'>
+        {{eachItem}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="extraSpace"></div>

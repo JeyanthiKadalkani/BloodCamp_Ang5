@@ -1,0 +1,48 @@
+<div class='row'>
+  <div class='col-md-4'>
+    <!-- form>(div[class='form-group']>label+input[class='form-control'])*5 -->
+
+    <form #frm='ngForm' (ngSubmit)='submit(frm.value)' ngNativeValidate>
+      <div class="form-group"><label for="Id">Id</label>
+        <input type="text" class="txtWidth form-control" name='id' [(ngModel)]='request.id'></div>
+      <div class="form-group"><label for="reqGroup">Req Group</label>
+        <input type="text" class="txtWidth form-control" name='reqGroup' [(ngModel)]='request.reqGroup' required></div>
+      <div class="form-group"><label for="reqDate">Req Date</label>
+        <input type="date" class="txtWidth form-control" name='reqDate' [(ngModel)]='request.reqDate' required></div>
+      <div class="form-group"><label for="reqHospital">Req Hospital</label>
+        <input type="text" class="txtWidth form-control" name='reqHospital' [(ngModel)]='request.reqHospital'></div>
+      <div class="form-group"><label for=""></label>
+        <input type="submit" class="btn btn-info" [value]='btnText'></div>
+      <div>
+
+      </div>
+    </form>
+    <!-- {{request | json}} -->
+  </div>
+  <div class='col-md-8'>
+    <table class="table table-striped">
+      <tr>
+        <td>Search By Group</td>
+        <td class="input"><input type='text' id='' value='' [(ngModel)]='searchGroup'></td>
+      </tr>
+      <tr>
+        <th>Id</th>
+        <th>Request Group</th>
+        <th>Request Date</th>
+        <th>Hospital Name</th>
+      </tr>
+      <tr *ngFor="let eachReq of reqList | filter:'reqGroup':searchGroup">
+        <td>{{eachReq.id}}</td>
+        <td>{{eachReq.reqGroup | uppercase}}</td>
+        <td>{{eachReq.reqDate | date:'medium'}}</td>
+        <td>{{eachReq.reqHospital}}</td>
+        <td>
+          <button class='fa fa-2x fa-remove' (click)='remove(eachReq)'></button>
+
+        </td>
+        <td><button class='fa fa-2x fa-edit' (click)='update(eachReq)'></button></td>
+      </tr>
+
+    </table>
+  </div>
+</div>

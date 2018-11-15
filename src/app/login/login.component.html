@@ -1,0 +1,12 @@
+<form [formGroup]='loginForm' (ngSubmit)='signIn()'>
+
+  <ng-container *ngFor='let eachConfig of formConfig'>
+    <div class='form-group'>
+      <label>{{eachConfig.label}}</label>
+      <input [type]='eachConfig.type' [name]='eachConfig.name' formControlName={{eachConfig.name}} class='txtWidth form-control'>
+    </div>
+  </ng-container>
+</form> <button class='btn btn-info' (click)='signIn()'>
+  Login</button>
+<div class='extraSpace'></div>
+<div class='badge-info'>{{errorMsg}}</div>

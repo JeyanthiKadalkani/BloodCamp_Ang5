@@ -1,0 +1,9 @@
+<nav class="nav">
+  <ul class='navbar'>
+    <li *ngFor='let eachItem of navLinks' class='nav-item'>
+      <a [routerLink]='eachItem.linkRef' class='nav-link'>{{eachItem.linkText}}</a>
+    </li>
+    <li class='nav-item' *ngIf='showLogin'><a [routerLink]="['login']" class='nav-link'>Login</a></li>
+    <li class='nav-item' *ngIf='showLogout'><a [routerLink]="['logout']" class='nav-link'>Logout</a></li>
+  </ul>
+</nav>

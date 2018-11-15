@@ -1,0 +1,7 @@
+<h3>Show Hospital</h3>
+<label>Enter the City:</label>
+<input type='text' [(ngModel)]='city'>
+<app-show-hospital [location]='city' (hospitalList)='onChangeHospital($event)'>
+
+</app-show-hospital>
+<div class="extraSpace">{{list}}</div>

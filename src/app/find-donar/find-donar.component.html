@@ -1,0 +1,20 @@
+<div class='bgColor form-group'>
+
+  <Label for="location">Show Location </Label>
+  <input type="text" (focus)='showLocation()' id='location' class='txtWidth form-control' [(ngModel)]='city'>
+  <ng-template #locRef></ng-template>
+</div>
+<div class='form-group'>
+  <label for="srch">Search Donar</label>
+  <input type="text" name="srch" id="srch" [(ngModel)]='bloodGroup' (blur)='change()' class='txtWidth form-control'>
+  <div>
+    <div class="extraSpace"></div>
+    <button [disabled]="isDisabled" (click)='search($event)'>Search</button>
+    <div>
+      <div>Donar for: {{bloodGroup}}</div>
+      <div>Details: {{donarDetails}}</div>
+    </div>
+
+  </div>
+
+</div>

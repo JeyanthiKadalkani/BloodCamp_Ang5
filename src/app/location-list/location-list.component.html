@@ -1,0 +1,12 @@
+<!-- <div *ngFor='let eachLocation of locations'>
+  <button [value]='eachLocation' (click)='setValue(eachLocation)'>{{eachLocation}}</button>
+</div> -->
+
+<div class="col-md-3 bg-secondary">
+  <ol class="list-inline">
+    <li *ngFor='let eachLocation of locations'>
+      <button [value]='eachLocation' (click)='setValue(eachLocation)'>{{eachLocation}}</button>
+    </li>
+  </ol>
+</div>
+

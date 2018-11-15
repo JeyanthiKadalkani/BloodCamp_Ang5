@@ -1,0 +1,43 @@
+<!-- <div class="card-deck">
+  <div class="card" *ngFor="let eachDonar of donarList">
+    <div class="card-header">{{eachDonar.name}}</div>
+    <div class="card-body">{{eachDonar.group}}</div>
+
+  </div>
+  <div class="class"></div>
+</div> -->
+<h2 class="class">Show Donar</h2>
+<table class='table table-bordered'>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Group</th>
+    <th>MobileNumber</th>
+    <th>Donar History</th>
+  </tr>
+  <tr *ngFor="let eachDonar of donarList">
+    <td>{{eachDonar.id}}</td>
+    <td>{{eachDonar.name}}</td>
+    <td>{{eachDonar.group}}</td>
+    <td>{{eachDonar.mobileNum}}</td>
+    <td><a [routerLink]="['/showDonar',eachDonar.id]">Donar History</a></td>
+  </tr>
+</table>
+<div *ngIf='details!=undefined'>
+  <h4>Donar History</h4>
+  <div class="media">
+    <img class="mr-3" class='logo' src="assets/Images/b1.jpg" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0">Id : {{details.id}}</h5>
+      <div *ngFor='let eachDetail of details.details'>
+        Date :{{eachDetail.date}}
+        Hospital Name :{{eachDetail.hospital}}
+      </div>
+    </div>
+  </div>
+  <!--Id : {{details.id}}
+  <div *ngFor='let eachDetail of details.details'>
+    Date :{{eachDetail.date}}
+    Hospital Name :{{eachDetail.hospital}}
+  </div> -->
+</div>

@@ -1,0 +1,16 @@
+<div class="container bgColor">
+  <div class="">
+
+    <!-- <ul>
+      <li *ngFor='let eachLink of linkList'>
+        <a href="{{eachLink.linkRef}}" class="{{eachLink.style}}">{{eachLink.linkText}}</a>
+      </li>
+    </ul> -->
+    <div style='padding-left:10px;float:right;'>
+      follow as @<span *ngFor="let eachLink of linkList">
+        <a style='padding-left:10px;' href="{{eachLink.linkRef}}" class="{{eachLink.style}}"></a>
+
+      </span></div>
+  </div>
+  <div class="class"></div>
+</div>

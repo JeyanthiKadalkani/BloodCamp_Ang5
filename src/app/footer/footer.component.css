@@ -1,0 +1,8 @@
+ul>li {
+  list-style: none;
+}
+
+.bgColor {
+  background-color: lightgray;
+  height: 40px;
+}

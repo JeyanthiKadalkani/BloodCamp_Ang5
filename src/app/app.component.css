@@ -1,0 +1,11 @@
+.alignContent {
+  height: 600px;
+  padding-top: 100px;
+  padding-left: 100px;
+  background-color: lightcyan;
+}
+
+.bgColor {
+  background-color: lightgray;
+  margin-top:40px;
+}
